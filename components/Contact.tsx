@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Contact() {
-  const [submissionStatus, setSubmissionStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [submissionStatus, setSubmissionStatus] = useState<"idle" | "sending" | "sent" | "activation" | "error">("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -23,10 +23,14 @@ export default function Contact() {
         },
         body: JSON.stringify(Object.fromEntries(formData.entries())),
       });
-      const result: { success?: boolean | string } = await response.json();
+      const result: { success?: boolean | string; message?: string } = await response.json();
 
-      if (!response.ok || result.success === false || result.success === "false") {
-        throw new Error("Form submission failed");
+      if (!response.ok || String(result.success) !== "true") {
+        if (/activat/i.test(result.message ?? "")) {
+          setSubmissionStatus("activation");
+          return;
+        }
+        throw new Error(result.message ?? "Form submission failed");
       }
 
       form.reset();
@@ -223,7 +227,12 @@ export default function Contact() {
 
               {submissionStatus === "sent" && (
                 <p role="status" className="text-sm text-emerald-400">
-                  Message submitted. If this is the first message, check your inbox for FormSubmit’s activation email and confirm the form.
+                  Message sent. Thank you for reaching out.
+                </p>
+              )}
+              {submissionStatus === "activation" && (
+                <p role="status" className="text-sm text-amber-300">
+                  Check your inbox or Spam for the FormSubmit activation email, then click its confirmation link. After activating, send your message again.
                 </p>
               )}
               {submissionStatus === "error" && (
