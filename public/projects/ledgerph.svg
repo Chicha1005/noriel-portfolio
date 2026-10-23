@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#07172d"/><stop offset="1" stop-color="#102e49"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  </defs>
+  <rect width="900" height="540" rx="28" fill="url(#bg)"/>
+  <rect x="28" y="28" width="844" height="484" rx="20" fill="#0b1c32" stroke="#23445f"/>
+  <rect x="28" y="28" width="178" height="484" rx="20" fill="#091628"/>
+  <path d="M186 28h20v484h-20z" fill="#091628"/>
+  <rect x="52" y="54" width="36" height="36" rx="11" fill="url(#accent)"/>
+  <path d="M61 73h7l5-9 6 17 5-8h7" stroke="#08233b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="98" y="69" fill="#f8fafc" font-family="Arial,sans-serif" font-size="20" font-weight="700">LedgerPH</text>
+  <text x="98" y="88" fill="#7dd3fc" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5">ACCOUNTING</text>
+  <rect x="48" y="121" width="139" height="38" rx="10" fill="#123453"/>
+  <text x="68" y="145" fill="#bae6fd" font-family="Arial,sans-serif" font-size="13" font-weight="600">Dashboard</text>
+  <text x="68" y="190" fill="#8495a8" font-family="Arial,sans-serif" font-size="13">Sales Invoices</text>
+  <text x="68" y="230" fill="#8495a8" font-family="Arial,sans-serif" font-size="13">Vendor Bills</text>
+  <text x="68" y="270" fill="#8495a8" font-family="Arial,sans-serif" font-size="13">General Ledger</text>
+  <text x="68" y="310" fill="#8495a8" font-family="Arial,sans-serif" font-size="13">Financial Reports</text>
+  <text x="68" y="350" fill="#8495a8" font-family="Arial,sans-serif" font-size="13">Inventory</text>
+  <text x="232" y="76" fill="#f8fafc" font-family="Arial,sans-serif" font-size="24" font-weight="700">Financial Overview</text>
+  <text x="232" y="101" fill="#94a3b8" font-family="Arial,sans-serif" font-size="13">Accounting &amp; inventory management</text>
+  <rect x="232" y="124" width="190" height="102" rx="14" fill="#102741" stroke="#24445f"/>
+  <text x="250" y="153" fill="#94a3b8" font-family="Arial,sans-serif" font-size="12">TOTAL REVENUE</text>
+  <text x="250" y="189" fill="#e2e8f0" font-family="Arial,sans-serif" font-size="26" font-weight="700">PHP 248,500</text>
+  <rect x="438" y="124" width="190" height="102" rx="14" fill="#102741" stroke="#24445f"/>
+  <text x="456" y="153" fill="#94a3b8" font-family="Arial,sans-serif" font-size="12">TOTAL EXPENSES</text>
+  <text x="456" y="189" fill="#e2e8f0" font-family="Arial,sans-serif" font-size="26" font-weight="700">PHP 172,300</text>
+  <rect x="644" y="124" width="202" height="102" rx="14" fill="#102741" stroke="#24445f"/>
+  <text x="662" y="153" fill="#94a3b8" font-family="Arial,sans-serif" font-size="12">NET INCOME</text>
+  <text x="662" y="189" fill="#67e8f9" font-family="Arial,sans-serif" font-size="26" font-weight="700">PHP 76,200</text>
+  <rect x="232" y="248" width="614" height="234" rx="14" fill="#102741" stroke="#24445f"/>
+  <text x="252" y="280" fill="#e2e8f0" font-family="Arial,sans-serif" font-size="15" font-weight="700">Financial Statements</text>
+  <text x="252" y="318" fill="#94a3b8" font-family="Arial,sans-serif" font-size="12">REPORT</text>
+  <text x="632" y="318" fill="#94a3b8" font-family="Arial,sans-serif" font-size="12">PERIOD</text>
+  <text x="754" y="318" fill="#94a3b8" font-family="Arial,sans-serif" font-size="12">STATUS</text>
+  <path d="M252 330h574M252 375h574M252 420h574" stroke="#24445f"/>
+  <text x="252" y="359" fill="#dbeafe" font-family="Arial,sans-serif" font-size="13">Trial Balance</text>
+  <text x="632" y="359" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="13">Current period</text>
+  <text x="754" y="359" fill="#67e8f9" font-family="Arial,sans-serif" font-size="12">Ready</text>
+  <text x="252" y="404" fill="#dbeafe" font-family="Arial,sans-serif" font-size="13">Income Statement</text>
+  <text x="632" y="404" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="13">Current period</text>
+  <text x="754" y="404" fill="#67e8f9" font-family="Arial,sans-serif" font-size="12">Ready</text>
+  <text x="252" y="449" fill="#dbeafe" font-family="Arial,sans-serif" font-size="13">Balance Sheet</text>
+  <text x="632" y="449" fill="#cbd5e1" font-family="Arial,sans-serif" font-size="13">As of today</text>
+  <text x="754" y="449" fill="#67e8f9" font-family="Arial,sans-serif" font-size="12">Ready</text>
+</svg>

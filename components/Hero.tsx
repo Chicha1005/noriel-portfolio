@@ -57,23 +57,13 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-5">
-          <Button
-            size="lg"
-            className="
-bg-sky-500
-hover:bg-sky-400
-px-8
-py-6
-rounded-xl
-shadow-xl
-transition-all
-duration-300
-hover:scale-105
-hover:shadow-sky-500/40
-"
+          <a
+            href="/resume.pdf"
+            download="Noriel_Cabab_Resume.pdf"
+            className="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 px-8 py-6 rounded-xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-sky-500/40 text-white font-medium"
           >
             Download Resume
-          </Button>
+          </a>
 
           <Button
             variant="outline"
