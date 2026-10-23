@@ -13,17 +13,17 @@ const features = [
   {
     icon: Calculator,
     title: "Accounting",
-    description: "Bookkeeping & finance operations",
+    description: "AR / AP & reconciliation",
   },
   {
     icon: FileBarChart2,
     title: "Audit",
-    description: "Internal Control & Compliance",
+    description: "Sales, cashiering & branch audits",
   },
   {
     icon: FileBarChart2,
-    title: "Financial Reporting",
-    description: "Accurate reports & business insights",
+    title: "Monthly Business Reporting",
+    description: "Sales, purchases, inventory & AR reports",
   },
   {
     icon: Briefcase,
@@ -95,7 +95,7 @@ export default function About() {
               transition={{ delay: .1 }}
               className="text-4xl md:text-5xl font-bold mt-3"
             >
-              Accounting Professional
+              Audit & Supervisory Professional
             </motion.h2>
 
             <motion.p
@@ -104,15 +104,12 @@ export default function About() {
               transition={{ delay: .2 }}
               className="mt-8 text-gray-300 leading-8"
             >
-              I am an Accounting Professional with experience in financial
-              reporting, auditing, and business operations. I focus on helping
-              organizations maintain accurate records, strengthen internal
-              controls, and make informed financial decisions.
-
-              <br /><br />
-
-              I enjoy using analytical thinking to support practical and
-              efficient business operations.
+              Audit and supervisory professional with 8+ years of experience across
+              branch auditing and pharmacy operations. My work includes
+              sales/cashiering, AR/AP, inventory and claims audits,
+              reconciliation, and monthly sales, purchases, inventory, and AR
+              reporting. I have conducted physical counts across three
+              branches in Isabela, Cagayan, and Nueva Vizcaya.
             </motion.p>
 
             {/* BUTTON */}

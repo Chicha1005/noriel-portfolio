@@ -35,14 +35,14 @@ export default function Hero() {
           Noriel M. Cabab
         </h1>
 
-        <div className="mt-4 text-2xl md:text-3xl font-semibold text-sky-400 h-10">
+        <div className="mt-4 text-xl md:text-3xl font-semibold text-sky-400 min-h-10">
           <TypeAnimation
             sequence={[
-              "Accounting Professional",
+              "Audit & Supervisory Professional",
               2000,
               "Auditor",
               2000,
-              "Financial Reporting",
+              "Business Reporting",
               2000,
             ]}
             wrapper="span"
