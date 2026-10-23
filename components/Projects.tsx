@@ -9,7 +9,7 @@ const projects = [
     tech: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL"],
     description:
       "Accounting and inventory app with customer/vendor records, invoices, bills, and general-ledger entries. Produces Trial Balance, Income Statement, Balance Sheet, and cash/bank movement reports, with Excel/CSV import and Excel/PDF export.",
-    live: "",
+    live: "https://ledgerph-accounting.vercel.app/",
     github: "",
     featured: true,
   },
