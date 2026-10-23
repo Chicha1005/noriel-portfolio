@@ -4,23 +4,23 @@ const skillGroups = [
   {
     title: "📊 Accounting & Business Tools",
     skills: [
-      { name: "Microsoft Excel", level: 100, icon: "📈" },
-      { name: "Google Sheets", level: 100, icon: "📊" },
-      { name: "QuickBooks", level: 90, icon: "💰" },
-      { name: "Inventory Audit", level: 100, icon: "📦" },
+      { name: "Microsoft Excel", level: 80, icon: "📈" },
+      { name: "Google Sheets", level: 75, icon: "📊" },
+      { name: "QuickBooks", level: 65, icon: "💰" },
+      { name: "Inventory Audit", level: 80, icon: "📦" },
+      { name: "ERP / POS Systems", level: 75, icon: "🧾" },
     ],
-    tools: ["ERP / POS Systems"],
   },
   {
     title: "💻 Development & Deployment Tools",
-    tools: [
-      "Git & GitHub",
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "Vercel",
+    skills: [
+      { name: "Git & GitHub", level: 65, icon: "🐙" },
+      { name: "Next.js", level: 60, icon: "▲" },
+      { name: "React", level: 60, icon: "⚛️" },
+      { name: "TypeScript", level: 55, icon: "🔷" },
+      { name: "Tailwind CSS", level: 65, icon: "🎨" },
+      { name: "Supabase", level: 55, icon: "🗄️" },
+      { name: "Vercel", level: 70, icon: "▲" },
     ],
   },
 ];
@@ -41,38 +41,32 @@ export default function Skills() {
                 {group.title}
               </h3>
 
-              {group.skills && (
-                <div className="space-y-6">
-                  {group.skills.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="mb-2 flex items-center justify-between">
-                        <span className="flex items-center gap-2 font-medium">
-                          <span className="text-xl">{skill.icon}</span>
-                          {skill.name}
-                        </span>
-                        <span className="font-semibold text-sky-400">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="h-3 overflow-hidden rounded-full bg-slate-800">
-                        <div
-                          className="h-full rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-1000"
-                          style={{ width: `${skill.level}%` }}
-                        />
-                      </div>
+              <div className="space-y-5">
+                {group.skills.map((skill) => (
+                  <div key={skill.name}>
+                    <div className="mb-2 flex items-center justify-between">
+                      <span className="flex items-center gap-2 font-medium">
+                        <span className="text-xl">{skill.icon}</span>
+                        {skill.name}
+                      </span>
+                      <span className="font-semibold text-sky-400">
+                        {skill.level}%
+                      </span>
                     </div>
-                  ))}
-                </div>
-              )}
-
-              <div className={`flex flex-wrap gap-3 ${group.skills ? "mt-7" : ""}`}>
-                {group.tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-2 text-sm font-medium text-sky-200"
-                  >
-                    {tool}
-                  </span>
+                    <div
+                      className="h-3 overflow-hidden rounded-full bg-slate-800"
+                      role="progressbar"
+                      aria-label={`${skill.name} proficiency`}
+                      aria-valuenow={skill.level}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                    >
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-1000"
+                        style={{ width: `${skill.level}%` }}
+                      />
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
