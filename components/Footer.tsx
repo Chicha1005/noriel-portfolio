@@ -13,7 +13,7 @@ export default function Footer() {
         </h2>
 
         <p className="text-slate-400 text-center">
-          Accounting Professional • Audit Officer
+          Accounting Professional • Auditor
         </p>
 
         <div className="flex gap-5 text-xl">

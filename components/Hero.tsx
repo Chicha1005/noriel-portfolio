@@ -40,7 +40,7 @@ export default function Hero() {
             sequence={[
               "Accounting Professional",
               2000,
-              "Audit Officer",
+              "Auditor",
               2000,
               "Financial Reporting",
               2000,
@@ -97,3 +97,4 @@ hover:scale-105
 </section>
   );
 }
+

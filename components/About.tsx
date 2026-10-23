@@ -28,7 +28,7 @@ const features = [
   {
     icon: Briefcase,
     title: "Experience",
-    description: "5+ Years Professional Experience",
+    description: "8+ Years Professional Experience",
   },
 ];
 
