@@ -1,10 +1,41 @@
 "use client";
 
+import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Contact() {
+  const [submissionStatus, setSubmissionStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSubmissionStatus("sending");
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/Norielcabab@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
+      });
+      const result: { success?: boolean | string } = await response.json();
+
+      if (!response.ok || result.success === false || result.success === "false") {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+      setSubmissionStatus("sent");
+    } catch {
+      setSubmissionStatus("error");
+    }
+  }
+
   return (
     <section
       id="contact"
@@ -152,39 +183,62 @@ export default function Contact() {
           {/* RIGHT */}
 
           <motion.form
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-10"
           >
+            <input type="hidden" name="_subject" value="New portfolio contact message" />
 
             <div className="space-y-6">
 
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
+                aria-label="Your Name"
+                required
                 className="w-full rounded-xl bg-slate-900 border border-slate-700 p-4 outline-none focus:border-sky-500"
               />
 
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
+                aria-label="Email Address"
+                required
                 className="w-full rounded-xl bg-slate-900 border border-slate-700 p-4 outline-none focus:border-sky-500"
               />
 
               <textarea
                 rows={6}
+                name="message"
                 placeholder="Your Message..."
+                aria-label="Your Message"
+                required
                 className="w-full rounded-xl bg-slate-900 border border-slate-700 p-4 outline-none resize-none focus:border-sky-500"
               />
 
+              {submissionStatus === "sent" && (
+                <p role="status" className="text-sm text-emerald-400">
+                  Message submitted. If this is the first message, check your inbox for FormSubmit’s activation email and confirm the form.
+                </p>
+              )}
+              {submissionStatus === "error" && (
+                <p role="alert" className="text-sm text-rose-400">
+                  Sorry, the message could not be sent. Please try again or email Norielcabab@gmail.com directly.
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-3 rounded-xl bg-sky-500 py-4 font-semibold hover:bg-sky-600 transition"
+                disabled={submissionStatus === "sending"}
+                className="w-full flex items-center justify-center gap-3 rounded-xl bg-sky-500 py-4 font-semibold hover:bg-sky-600 transition disabled:cursor-not-allowed disabled:opacity-70"
               >
                 <Send size={18} />
-                Send Message
+                {submissionStatus === "sending" ? "Sending..." : "Send Message"}
               </button>
 
             </div>
