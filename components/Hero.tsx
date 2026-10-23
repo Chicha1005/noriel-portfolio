@@ -65,24 +65,12 @@ export default function Hero() {
             Download Resume
           </a>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="
-border-sky-500
-text-sky-400
-px-8
-py-6
-rounded-xl
-hover:bg-sky-500
-hover:text-white
-transition-all
-duration-300
-hover:scale-105
-"
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center border border-sky-500 px-8 py-6 rounded-xl text-sky-400 transition-all duration-300 hover:scale-105 hover:bg-sky-500 hover:text-white"
           >
             Contact Me
-          </Button>
+          </a>
         </div>
       </div>
     <div className="absolute bottom-8 flex flex-col items-center animate-bounce">
@@ -97,4 +85,3 @@ hover:scale-105
 </section>
   );
 }
-
