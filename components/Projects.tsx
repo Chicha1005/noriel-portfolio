@@ -39,7 +39,7 @@ const projects = [
     tech: ["Excel", "Google Sheets"],
     description:
       "A reporting system for inventory reconciliation, warehouse monitoring, and stock analysis.",
-    live: "#",
+    live: "https://docs.google.com/spreadsheets/d/1Moxy1IkifHtxyDGloTn2nsKAia_GRcB14elkigMcPTI/edit?usp=sharing",
     github: "#",
     featured: false,
   },
