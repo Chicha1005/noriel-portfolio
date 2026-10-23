@@ -2,17 +2,6 @@
 
 const skillGroups = [
   {
-    title: "💻 Web Development",
-    skills: [
-      { name: "HTML", level: 95, icon: "🌐" },
-      { name: "CSS", level: 90, icon: "🎨" },
-      { name: "JavaScript", level: 85, icon: "⚡" },
-      { name: "React", level: 80, icon: "⚛️" },
-      { name: "Next.js", level: 75, icon: "▲" },
-      { name: "Tailwind CSS", level: 90, icon: "💨" },
-    ],
-  },
-  {
     title: "📊 Accounting & Business Tools",
     skills: [
       { name: "Microsoft Excel", level: 100, icon: "📈" },
@@ -34,7 +23,7 @@ export default function Skills() {
           My Skills
         </h2>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-3xl gap-8">
           {skillGroups.map((group) => (
             <div
               key={group.title}

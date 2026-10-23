@@ -40,11 +40,9 @@ export default function Hero() {
             sequence={[
               "Accounting Professional",
               2000,
-              "Web Developer",
-              2000,
               "Audit Officer",
               2000,
-              "Next.js Developer",
+              "Financial Reporting",
               2000,
             ]}
             wrapper="span"
@@ -54,9 +52,8 @@ export default function Hero() {
         </div>
 
         <p className="max-w-2xl mt-8 text-lg leading-8 text-slate-300">
-          Passionate about finance, technology, and building modern web
-          applications that help businesses become smarter, faster, and more
-          efficient.
+          Passionate about accounting, auditing, and helping businesses make
+          smarter, more informed financial decisions.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-5">

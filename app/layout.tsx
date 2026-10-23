@@ -16,18 +16,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Noriel M. Cabab | Accounting Professional & Web Developer",
+  title: "Noriel M. Cabab | Accounting Professional",
   description:
-    "Professional portfolio of Noriel M. Cabab showcasing accounting, auditing, finance, and modern web development projects built with Next.js, React, TypeScript, and Tailwind CSS.",
+    "Professional portfolio of Noriel M. Cabab showcasing experience in accounting, auditing, financial reporting, and business operations.",
   keywords: [
     "Noriel Cabab",
     "Accounting Professional",
     "Audit Officer",
-    "Web Developer",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
+    "Financial Reporting",
+    "Bookkeeping",
     "Portfolio",
   ],
   authors: [{ name: "Noriel M. Cabab" }],

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import {
   Briefcase,
   Calculator,
-  Code2,
   FileBarChart2,
   Download,
 } from "lucide-react";
@@ -14,7 +13,7 @@ const features = [
   {
     icon: Calculator,
     title: "Accounting",
-    description: "Financial Reporting & Bookkeeping",
+    description: "Bookkeeping & finance operations",
   },
   {
     icon: FileBarChart2,
@@ -22,9 +21,9 @@ const features = [
     description: "Internal Control & Compliance",
   },
   {
-    icon: Code2,
-    title: "Web Development",
-    description: "Next.js • React • TypeScript",
+    icon: FileBarChart2,
+    title: "Financial Reporting",
+    description: "Accurate reports & business insights",
   },
   {
     icon: Briefcase,
@@ -96,10 +95,7 @@ export default function About() {
               transition={{ delay: .1 }}
               className="text-4xl md:text-5xl font-bold mt-3"
             >
-              Accounting Professional &
-              <span className="text-blue-400">
-                {" "}Web Developer
-              </span>
+              Accounting Professional
             </motion.h2>
 
             <motion.p
@@ -109,14 +105,14 @@ export default function About() {
               className="mt-8 text-gray-300 leading-8"
             >
               I am an Accounting Professional with experience in financial
-              reporting, auditing, and business operations. Alongside my
-              accounting career, I continuously build modern web applications
-              using Next.js, React, TypeScript, and Tailwind CSS.
+              reporting, auditing, and business operations. I focus on helping
+              organizations maintain accurate records, strengthen internal
+              controls, and make informed financial decisions.
 
               <br /><br />
 
-              I enjoy combining analytical thinking with technology to create
-              practical, efficient, and user-friendly solutions.
+              I enjoy using analytical thinking to support practical and
+              efficient business operations.
             </motion.p>
 
             {/* BUTTON */}
